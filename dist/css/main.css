@@ -1,0 +1,228 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* 0. Reset ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 1. Main Layout ================================= */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+}
+
+.onoffswitch {
+	position: relative;
+	width: 90px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+	display: none;
+}
+
+.onoffswitch-label {
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+	border: 2px solid #999999;
+	border-radius: 20px;
+}
+
+.onoffswitch-inner {
+	display: block;
+	width: 200%;
+	margin-left: -100%;
+	transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+	display: block;
+	float: left;
+	width: 50%;
+	height: 30px;
+	padding: 0;
+	line-height: 30px;
+	font-size: 14px;
+	color: white;
+	font-family: Trebuchet, Arial, sans-serif;
+	font-weight: bold;
+	box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+	content: "ON";
+	padding-left: 10px;
+	background-color: #34A7C1;
+	color: #FFFFFF;
+}
+
+.onoffswitch-inner:after {
+	content: "OFF";
+	padding-right: 10px;
+	background-color: #EEEEEE;
+	color: #999999;
+	text-align: right;
+}
+
+.onoffswitch-switch {
+	display: block;
+	width: 18px;
+	margin: 6px;
+	background: #FFFFFF;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 56px;
+	border: 2px solid #999999;
+	border-radius: 20px;
+	transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+	margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+	right: 0px;
+}
+
+/* 2. Content ================================= */
+.content {
+	width: 100%;
+}
+
+.content .outter-form-wrap {
+	width: 85%;
+	margin: 0 auto;
+}
+
+.content .outter-form-wrap .inner-form-wrap {
+	width: 100%;
+	display: flex;
+}
+
+.content .outter-form-wrap .inner-form-wrap .form-container {
+	border: 1px solid;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .status-container {
+	width: 260px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .status-container .exit {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	height: 30px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .status-container .container-title {
+	font-weight: 600;
+	padding-bottom: 5px;
+	border-bottom: 1px solid;
+	margin-bottom: 10px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .status-container .status-container-main-contents .radio-wrap {
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	transition: all .8s;
+	border-radius: 5px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .status-container .status-container-main-contents .radio-wrap:hover {
+	background-color: #f2f2f2;
+}
+
+.content .outter-form-wrap .inner-form-wrap .status-container .status-container-main-contents .on-off-wrap {
+	display: flex;
+	align-items: center;
+}
+
+.content .outter-form-wrap .inner-form-wrap .status-container .status-container-main-contents .reset-filter {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.content .outter-form-wrap .inner-form-wrap .status-container .status-container-main-contents .reset-filter button {
+	width: 60px;
+	height: 30px;
+	background-color: #f1a13c;
+	border: 1px #e4b066 solid;
+	border-radius: 5px;
+	color: white;
+}
+
+/*# sourceMappingURL=main.css.map */
