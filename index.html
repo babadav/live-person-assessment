@@ -1,147 +1,125 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title> ¯\_(ツ)_/¯ </title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<link rel="stylesheet" href="dist/css/main.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-
-			
-	</head>
-	<body>
-		
-		<section class="content">
-			
-			<div class="outter-form-wrap">
-				<div class="inner-form-wrap">
-					<div class="status-container form-container">
-						<div class="exit">
-							<p><i class="fas fa-times"></i></p>
-						</div>
-						<div class="status-container-inner-wrap">
-								<div class="container-title">
-								<h4>Filter by status</h4>
-							</div>
-							<div class="status-container-main-contents">
-								<form action="">
-									<div class="radio-wrap">
-										<input type="checkbox" id="open">
-										<label for="open"><i class="fas fa-comment-alt"></i> Open</label>
-									</div>
-									<div class="radio-wrap overdue-margin-left">
-										<input type="checkbox" id="overdue">
-										<label for="open"><i class="fas fa-bell"></i>Overdue (open)</label>
-									</div>
-									<div class="radio-wrap">
-										<input type="checkbox" id="closed">
-										<label for="closed"><i class="fas fa-times-circle"></i>Closed</label>
-									</div>
-								</form>
-								<div class="on-off-wrap">
-									<label for="onoffswitch" class="on-off-switch-label">In queue only</label>
-									<i class="fas fa-toggle-on fa-2x" ></i>
-								</div>
-
-								<div class="reset-filter">
-									<p>Reset</p>
-									<button>Filter</button>
-								</div>
-							</div>
-						</div>
-						
-					</div>
-
-					
-					<div class="response-time-container form-container">
-						<div class="exit">
-							<p><i class="fas fa-times "></i></p>
-						</div>
-						<div class="response-container-inner-wrap">
-							<div class="container-title">
-								<h4>Filter by Response Time</h4>
-							</div>
-								<div class="response-time-container-main-contents">
-									<form action="" class="response-time-form">
-										<select name="longer than" class="longer-than-dropdown response-time-dropdown">
-											<option value="longer than">Longer Than</option>
-										</select>
-										<input type="text" class="response-time-input">
-										<select name="minutes" class="minutes-dropdown response-time-dropdown">
-											<option value="minutes">Minutes</option>
-										</select>
-									</form>
-									<div class="reset-filter">
-										<p>Reset</p>
-										<button>Filter</button>
-									</div>
-								</div>
-						</div>
-						
-					</div>
-
-				
-
-					<div class="duration-container form-container">
-						<div class="exit">
-							<p><i class="fas fa-times"></i></p>
-						</div>
-						<div class="duration-container-inner-wrap">
-							<div class="container-title">
-								<h4>Filter by Duration</h4>
-							</div>
-						<div class="duration-main-contents">
-							<form action="" class="duration-form">
-								<div class="from-input">
-									<label for="from">From:</label> <br /> 
-									<input type="text" name="from" />
-								</div>
-								<div class="to-input">
-									<label for="to">To:</label> <br /> 
-									<input type="text" name="to" /> 
-								</div>
-								<select name="seconds" class="seconds-dropdown">
-									<option value="Seconds">Seconds</option>
-								</select>
-									
-							</form>
-							<div class="reset-filter">
-									<p>Reset</p>
-									<button>Filter</button>
-								</div>
-						</div>
-
-
-						</div>
-						
-						
-					</div>
-				</div>
-			</div>
-
-
-			
-		</section>
-
-	
-
-
-
-	<!-- <div class="onoffswitch">
-			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-			<label class="onoffswitch-label" for="myonoffswitch">
-				<span class="onoffswitch-inner"></span>
-				<span class="onoffswitch-switch"></span>
-			</label>
-		</div> -->
-
-
-		<script src="dist/js/main.js"></script>
-
-	</body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title> ¯\_(ツ)_/¯ </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="dist/css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+    <body>
+        <section class="content">
+            <div class="outter-form-wrap">
+                <div class="inner-form-wrap">
+                    <div class="status-container-wrap">
+                        <div class="title-icon">
+                            <p>Status <i class="fas fa-hourglass-start"></i></p>
+                        </div>
+                        <div class="status-container form-container">
+                            <div class="exit">
+                                <p><i class="fas fa-times"></i></p>
+                            </div>
+                            <div class="status-container-inner-wrap">
+                                <div class="container-title">
+                                    <h4>Filter by status</h4>
+                                </div>
+                                <div class="status-container-main-contents">
+                                    <form action="">
+                                        <div class="radio-wrap">
+                                            <input type="checkbox" id="open">
+                                            <label for="open"><i class="fas fa-comment-alt"></i> Open</label>
+                                        </div>
+                                        <div class="radio-wrap overdue-margin-left">
+                                            <input type="checkbox" id="overdue">
+                                            <label for="open"><i class="fas fa-bell"></i>Overdue (open)</label>
+                                        </div>
+                                        <div class="radio-wrap">
+                                            <input type="checkbox" id="closed">
+                                            <label for="closed"><i class="fas fa-times-circle"></i>Closed</label>
+                                        </div>
+                                    </form>
+                                    <div class="on-off-wrap">
+                                        <label for="onoffswitch" class="on-off-switch-label">In queue only</label>
+                                        <i class="fas fa-toggle-on fa-2x" ></i>
+                                    </div>
+                                    <div class="reset-filter">
+                                        <p>Reset</p>
+                                        <button>Filter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="response-container-wrap">
+                        <div class="title-icon">
+                            <p>Response Time<i class="fas fa-hourglass-start"></i></p>
+                        </div>
+                        <div class="response-time-container form-container">
+                            <div class="exit">
+                                <p><i class="fas fa-times "></i></p>
+                            </div>
+                            <div class="response-container-inner-wrap">
+                                <div class="container-title">
+                                    <h4>Filter by Response Time</h4>
+                                </div>
+                                <div class="response-time-container-main-contents">
+                                    <form action="" class="response-time-form">
+                                        <select name="longer than" class="longer-than-dropdown response-time-dropdown">
+                                            <option value="longer than">Longer Than</option>
+                                        </select>
+                                        <input type="text" class="response-time-input">
+                                        <select name="minutes" class="minutes-dropdown response-time-dropdown">
+                                            <option value="minutes">Minutes</option>
+                                        </select>
+                                    </form>
+                                    <div class="reset-filter">
+                                        <p>Reset</p>
+                                        <button>Filter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="duration-container-wrap">
+                        <div class="title-icon">
+                            <p>Duration<i class="fas fa-hourglass-start"></i></p>
+                        </div>
+                        <div class="duration-container form-container">
+                            <div class="exit">
+                                <p><i class="fas fa-times"></i></p>
+                            </div>
+                            <div class="duration-container-inner-wrap">
+                                <div class="container-title">
+                                    <h4>Filter by Duration</h4>
+                                </div>
+                                <div class="duration-main-contents">
+                                    <form action="" class="duration-form">
+                                        <div class="from-input">
+                                            <label for="from">From:</label> <br /> 
+                                            <input type="text" name="from" />
+                                        </div>
+                                        <div class="to-input">
+                                            <label for="to">To:</label> <br /> 
+                                            <input type="text" name="to" /> 
+                                        </div>
+                                        <select name="seconds" class="seconds-dropdown">
+                                            <option value="Seconds">Seconds</option>
+                                        </select>
+                                    </form>
+                                    <div class="reset-filter">
+                                        <p>Reset</p>
+                                        <button>Filter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="dist/js/main.js"></script>
+    </body>
 </html>

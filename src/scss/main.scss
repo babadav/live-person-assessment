@@ -13,9 +13,10 @@ TABLE OF CONTENTS:
 ==============================================
 */
 
-/* 0. Reset ================================= */
-@import 'reset';
 
+/* 0. Reset ================================= */
+
+@import 'reset';
 
 /* 1. Main Layout ================================= */
 
@@ -29,96 +30,94 @@ body {
 }
 
 
-
-
 /* 2. Content ================================= */
 
-
-.fas{
+.fas {
 	color: #efefef;
 }
 
-.fa-bell{
+.fa-bell {
 	color: red;
 	margin-right: 5px;
 }
 
-.fa-comment-alt{
+.fa-hourglass-start {
+	margin-left: 5px;
+	color: #e4b066;
+}
+
+.fa-comment-alt {
 	color: limegreen
 }
 
-.content{
+.content {
 	width: 100%;
-	.outter-form-wrap{
+	.outter-form-wrap {
 		width: 85%;
 		margin: 0 auto;
-		padding-top: 300px;
-
-		.inner-form-wrap{
+		padding-top: 250px;
+		.title-icon {
+			margin-bottom: 10px;
+		}
+		.inner-form-wrap {
 			width: 100%;
 			display: flex;
 			justify-content: space-around;
 			flex-wrap: wrap;
-
-			.form-container{
+			.form-container {
 				border: 1px solid #efefef;
 				border-radius: 5px;
 				padding: 10px;
 			}
-			.status-container, .response-time-container, .duration-container{
+			.status-container,
+			.response-time-container,
+			.duration-container {
 				width: 260px;
-
-
-				.exit{
+				.exit {
 					width: 100%;
 					display: flex;
 					justify-content: flex-end;
 					height: 30px;
 				}
-
-				.status-container-inner-wrap,.response-container-inner-wrap, .duration-container-inner-wrap{
+				.status-container-inner-wrap,
+				.response-container-inner-wrap,
+				.duration-container-inner-wrap {
 					width: 84%;
 					margin: 0 auto;
-					
-					.status-container-main-contents, .response-time-container-main-contents, .duration-main-contents {
-						.radio-wrap{
+					.status-container-main-contents,
+					.response-time-container-main-contents,
+					.duration-main-contents {
+						.radio-wrap {
 							margin-bottom: 5px;
 							padding-top: 5px;
 							padding-bottom: 5px;
 							transition: all .8s;
 							border-radius: 5px;
-	
-							.fa-times-circle{
+							.fa-times-circle {
 								margin-right: 5px;
 							}
-	
-							&:hover{
+							&:hover {
 								background-color: #f2f2f2;
-								
 							}
 						}
-	
-						.overdue-margin-left{
+						.overdue-margin-left {
 							padding-left: 15px;
 						}
-	
-						.on-off-wrap{
+						.on-off-wrap {
 							display: flex;
 							align-items: center;
 							margin-bottom: 50px;
-
-							.on-off-switch-label{
+							.on-off-switch-label {
 								margin-right: 10px;
 							}
 						}
-	
-						.reset-filter{
+						.reset-filter {
 							width: 100%;
 							display: flex;
 							justify-content: space-between;
 							align-items: center;
-	
-							button{
+							font-size: .9rem;
+							button {
 								width: 60px;
 								height: 30px;
 								background-color: #f1a13c;
@@ -129,76 +128,60 @@ body {
 						}
 					}
 				}
-
-				.container-title{
+				.container-title {
 					font-weight: 400;
 					padding-bottom: 5px;
 					border-bottom: 1px solid #f2f2f2;
 					margin-bottom: 10px;
 					font-weight: 700;
-
 				}
-
-				
 			}
-
-			.response-time-container{
+			.response-time-container {
 				width: 260px;
 				height: 220px;
-				
-	
-				.response-time-container-main-contents{
-	
-						.response-time-form{
-							margin-bottom: 20px;
-							
-
-							.response-time-dropdown{
-								height: 30px;
-							}
-							.longer-than-dropdown{
-								width: 200px;
-								margin-bottom: 10px;
-							}
-
-							.response-time-input{
-								width: 60px;
-								height: 30px;
-								border-radius: 5px;
-								margin-right: 5px;
-							}
-
-							.minutes-dropdown{
-								width: 130px;
-							}
+				.response-time-container-main-contents {
+					.response-time-form {
+						margin-bottom: 20px;
+						.response-time-dropdown {
+							height: 30px;
+						}
+						.longer-than-dropdown {
+							width: 200px;
+							margin-bottom: 10px;
+						}
+						.response-time-input {
+							width: 60px;
+							height: 30px;
+							border-radius: 5px;
+							margin-right: 5px;
+						}
+						.minutes-dropdown {
+							width: 130px;
 						}
 					}
-				
+				}
 			}
-
-			.duration-container{
+			.duration-container {
 				width: 366px;
 				height: 200px;
-
-				.duration-container-inner-wrap{
-					.duration-main-contents{
-						.duration-form{
+				.duration-container-inner-wrap {
+					.duration-main-contents {
+						.duration-form {
 							width: 100%;
 							display: flex;
 							align-items: center;
 							margin-bottom: 20px;
-							.from-input, .to-input{
-								input{
+							.from-input,
+							.to-input {
+								input {
 									width: 80px;
 									height: 30px;
 									border-radius: 5px;
 									margin-right: 5px;
 									margin-top: 5px;
 								}
-								
 							}
-
-							select{
+							select {
 								width: 120px;
 								height: 30px;
 								margin-top: 15px;
@@ -206,8 +189,15 @@ body {
 						}
 					}
 				}
-			
 			}
 		}
 	}
 }
+
+@media screen and (max-width: 735px){
+	
+	.duration-container-wrap, .response-container-wrap{
+		margin-top: 10%;
+	}
+}
+
