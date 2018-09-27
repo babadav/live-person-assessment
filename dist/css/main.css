@@ -74,87 +74,23 @@ table {
 
 body {
 	width: 100%;
-}
-
-.onoffswitch {
-	position: relative;
-	width: 90px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-}
-
-.onoffswitch-checkbox {
-	display: none;
-}
-
-.onoffswitch-label {
-	display: block;
-	overflow: hidden;
-	cursor: pointer;
-	border: 2px solid #999999;
-	border-radius: 20px;
-}
-
-.onoffswitch-inner {
-	display: block;
-	width: 200%;
-	margin-left: -100%;
-	transition: margin 0.3s ease-in 0s;
-}
-
-.onoffswitch-inner:before, .onoffswitch-inner:after {
-	display: block;
-	float: left;
-	width: 50%;
-	height: 30px;
-	padding: 0;
-	line-height: 30px;
-	font-size: 14px;
-	color: white;
-	font-family: Trebuchet, Arial, sans-serif;
-	font-weight: bold;
-	box-sizing: border-box;
-}
-
-.onoffswitch-inner:before {
-	content: "ON";
-	padding-left: 10px;
-	background-color: #34A7C1;
-	color: #FFFFFF;
-}
-
-.onoffswitch-inner:after {
-	content: "OFF";
-	padding-right: 10px;
-	background-color: #EEEEEE;
-	color: #999999;
-	text-align: right;
-}
-
-.onoffswitch-switch {
-	display: block;
-	width: 18px;
-	margin: 6px;
-	background: #FFFFFF;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 56px;
-	border: 2px solid #999999;
-	border-radius: 20px;
-	transition: all 0.3s ease-in 0s;
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-	margin-left: 0;
-}
-
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-	right: 0px;
+	font-family: 'Roboto', sans-serif;
 }
 
 /* 2. Content ================================= */
+.fas {
+	color: #efefef;
+}
+
+.fa-bell {
+	color: red;
+	margin-right: 5px;
+}
+
+.fa-comment-alt {
+	color: limegreen;
+}
+
 .content {
 	width: 100%;
 }
@@ -162,38 +98,39 @@ body {
 .content .outter-form-wrap {
 	width: 85%;
 	margin: 0 auto;
+	padding-top: 300px;
 }
 
 .content .outter-form-wrap .inner-form-wrap {
 	width: 100%;
 	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .content .outter-form-wrap .inner-form-wrap .form-container {
-	border: 1px solid;
+	border: 1px solid #efefef;
 	border-radius: 5px;
 	padding: 10px;
 }
 
-.content .outter-form-wrap .inner-form-wrap .status-container {
+.content .outter-form-wrap .inner-form-wrap .status-container, .content .outter-form-wrap .inner-form-wrap .response-time-container, .content .outter-form-wrap .inner-form-wrap .duration-container {
 	width: 260px;
 }
 
-.content .outter-form-wrap .inner-form-wrap .status-container .exit {
+.content .outter-form-wrap .inner-form-wrap .status-container .exit, .content .outter-form-wrap .inner-form-wrap .response-time-container .exit, .content .outter-form-wrap .inner-form-wrap .duration-container .exit {
 	width: 100%;
 	display: flex;
 	justify-content: flex-end;
 	height: 30px;
 }
 
-.content .outter-form-wrap .inner-form-wrap .status-container .container-title {
-	font-weight: 600;
-	padding-bottom: 5px;
-	border-bottom: 1px solid;
-	margin-bottom: 10px;
+.content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap {
+	width: 84%;
+	margin: 0 auto;
 }
 
-.content .outter-form-wrap .inner-form-wrap .status-container .status-container-main-contents .radio-wrap {
+.content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .status-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .response-time-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .duration-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .status-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .response-time-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .duration-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .status-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .response-time-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .duration-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .status-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .response-time-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .duration-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .status-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .response-time-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .duration-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .status-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .response-time-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .duration-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .status-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .response-time-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .duration-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .status-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .response-time-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .duration-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .status-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .response-time-container-main-contents .radio-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .duration-main-contents .radio-wrap {
 	margin-bottom: 5px;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -201,28 +138,105 @@ body {
 	border-radius: 5px;
 }
 
-.content .outter-form-wrap .inner-form-wrap .status-container .status-container-main-contents .radio-wrap:hover {
+.content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .status-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .response-time-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .duration-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .status-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .response-time-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .duration-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .status-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .response-time-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .duration-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .status-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .response-time-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .duration-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .status-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .response-time-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .duration-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .status-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .response-time-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .duration-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .status-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .response-time-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .duration-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .status-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .response-time-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .duration-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .status-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .response-time-container-main-contents .radio-wrap .fa-times-circle, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .duration-main-contents .radio-wrap .fa-times-circle {
+	margin-right: 5px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .status-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .response-time-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .duration-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .status-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .response-time-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .duration-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .status-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .response-time-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .duration-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .status-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .response-time-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .duration-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .status-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .response-time-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .duration-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .status-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .response-time-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .duration-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .status-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .response-time-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .duration-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .status-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .response-time-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .duration-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .status-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .response-time-container-main-contents .radio-wrap:hover, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .duration-main-contents .radio-wrap:hover {
 	background-color: #f2f2f2;
 }
 
-.content .outter-form-wrap .inner-form-wrap .status-container .status-container-main-contents .on-off-wrap {
-	display: flex;
-	align-items: center;
+.content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .status-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .response-time-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .duration-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .status-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .response-time-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .duration-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .status-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .response-time-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .duration-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .status-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .response-time-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .duration-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .status-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .response-time-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .duration-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .status-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .response-time-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .duration-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .status-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .response-time-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .duration-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .status-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .response-time-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .duration-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .status-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .response-time-container-main-contents .overdue-margin-left, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .duration-main-contents .overdue-margin-left {
+	padding-left: 15px;
 }
 
-.content .outter-form-wrap .inner-form-wrap .status-container .status-container-main-contents .reset-filter {
+.content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .status-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .response-time-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .duration-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .status-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .response-time-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .duration-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .status-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .response-time-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .duration-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .status-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .response-time-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .duration-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .status-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .response-time-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .duration-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .status-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .response-time-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .duration-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .status-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .response-time-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .duration-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .status-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .response-time-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .duration-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .status-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .response-time-container-main-contents .on-off-wrap, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .duration-main-contents .on-off-wrap {
+	display: flex;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .status-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .response-time-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .duration-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .status-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .response-time-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .duration-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .status-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .response-time-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .duration-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .status-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .response-time-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .duration-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .status-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .response-time-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .duration-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .status-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .response-time-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .duration-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .status-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .response-time-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .duration-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .status-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .response-time-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .duration-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .status-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .response-time-container-main-contents .on-off-wrap .on-off-switch-label, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .duration-main-contents .on-off-wrap .on-off-switch-label {
+	margin-right: 10px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .status-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .response-time-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .duration-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .status-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .response-time-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .duration-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .status-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .response-time-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .duration-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .status-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .response-time-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .duration-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .status-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .response-time-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .duration-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .status-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .response-time-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .duration-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .status-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .response-time-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .duration-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .status-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .response-time-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .duration-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .status-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .response-time-container-main-contents .reset-filter, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .duration-main-contents .reset-filter {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
-.content .outter-form-wrap .inner-form-wrap .status-container .status-container-main-contents .reset-filter button {
+.content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .status-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .response-time-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .status-container .status-container-inner-wrap .duration-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .status-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .response-time-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .status-container .response-container-inner-wrap .duration-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .status-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .response-time-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .status-container .duration-container-inner-wrap .duration-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .status-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .response-time-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .response-time-container .status-container-inner-wrap .duration-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .status-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .response-time-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .response-time-container .response-container-inner-wrap .duration-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .status-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .response-time-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .response-time-container .duration-container-inner-wrap .duration-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .status-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .response-time-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .duration-container .status-container-inner-wrap .duration-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .status-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .response-time-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .duration-container .response-container-inner-wrap .duration-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .status-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .response-time-container-main-contents .reset-filter button, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .duration-main-contents .reset-filter button {
 	width: 60px;
 	height: 30px;
 	background-color: #f1a13c;
 	border: 1px #e4b066 solid;
 	border-radius: 5px;
 	color: white;
+}
+
+.content .outter-form-wrap .inner-form-wrap .status-container .container-title, .content .outter-form-wrap .inner-form-wrap .response-time-container .container-title, .content .outter-form-wrap .inner-form-wrap .duration-container .container-title {
+	font-weight: 400;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #f2f2f2;
+	margin-bottom: 10px;
+	font-weight: 700;
+}
+
+.content .outter-form-wrap .inner-form-wrap .response-time-container {
+	width: 260px;
+	height: 220px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .response-time-container .response-time-container-main-contents .response-time-form {
+	margin-bottom: 20px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .response-time-container .response-time-container-main-contents .response-time-form .response-time-dropdown {
+	height: 30px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .response-time-container .response-time-container-main-contents .response-time-form .longer-than-dropdown {
+	width: 200px;
+	margin-bottom: 10px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .response-time-container .response-time-container-main-contents .response-time-form .response-time-input {
+	width: 60px;
+	height: 30px;
+	border-radius: 5px;
+	margin-right: 5px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .response-time-container .response-time-container-main-contents .response-time-form .minutes-dropdown {
+	width: 130px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .duration-container {
+	width: 366px;
+	height: 200px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .duration-main-contents .duration-form {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .duration-main-contents .duration-form .from-input input, .content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .duration-main-contents .duration-form .to-input input {
+	width: 80px;
+	height: 30px;
+	border-radius: 5px;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.content .outter-form-wrap .inner-form-wrap .duration-container .duration-container-inner-wrap .duration-main-contents .duration-form select {
+	width: 120px;
+	height: 30px;
+	margin-top: 15px;
 }
 
 /*# sourceMappingURL=main.css.map */
